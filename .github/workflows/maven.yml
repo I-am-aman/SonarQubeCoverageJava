@@ -34,3 +34,16 @@ jobs:
       with:
         name: buildArtifact
         path: target/*.jar
+
+  Deplopyment:
+    runs-on: macos-latest
+    needs: build
+
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: downloadArtifact
+        path: .
+
+    - name: Deployment
+      run: ls -lart
