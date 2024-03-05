@@ -35,7 +35,7 @@ jobs:
         name: buildArtifact
         path: target/*.jar
 
-  Deplopyment:
+  Deployment:
     runs-on: macos-latest
     needs: build
 
@@ -46,4 +46,4 @@ jobs:
         path: .
 
     - name: Deployment
-      run: ls -lart
+      run: ls -laRt
