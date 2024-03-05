@@ -42,8 +42,8 @@ jobs:
     steps:
     - uses: actions/download-artifact@v4
       with:
-        name: downloadArtifact
+        name: buildArtifact
         path: .
 
-    - name: Deployment
+    - name: Deploy Artifact
       run: ls -laRt
